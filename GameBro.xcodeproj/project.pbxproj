@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,20 @@
 		9A4CE21624C5E4490055EA45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A4CE21424C5E4490055EA45 /* LaunchScreen.storyboard */; };
 		9A4CE22124C5E4490055EA45 /* GameBroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4CE22024C5E4490055EA45 /* GameBroTests.swift */; };
 		9A4CE22C24C5E4490055EA45 /* GameBroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4CE22B24C5E4490055EA45 /* GameBroUITests.swift */; };
+		9A8B7B5624C8A37D005F3F21 /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8B7B5524C8A37D005F3F21 /* RestClient.swift */; };
+		9AB4076224C5EAF8009B93AF /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB4076124C5EAF8009B93AF /* Genre.swift */; };
+		9AB4076624C5EB7B009B93AF /* ParentPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB4076524C5EB7B009B93AF /* ParentPlatform.swift */; };
+		9AB4076A24C5EC98009B93AF /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB4076924C5EC98009B93AF /* Game.swift */; };
+		9AB4076C24C5ED71009B93AF /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB4076B24C5ED71009B93AF /* Pagination.swift */; };
+		9AE8D18E24C5EEED001C7EBD /* GamesModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8D18D24C5EEED001C7EBD /* GamesModels.swift */; };
+		9AE8D19024C5F793001C7EBD /* GamesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8D18F24C5F793001C7EBD /* GamesWorker.swift */; };
+		9AE8D19224C5F906001C7EBD /* GamesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8D19124C5F906001C7EBD /* GamesInteractor.swift */; };
+		9AE8D19424C5F9D2001C7EBD /* GamesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8D19324C5F9D2001C7EBD /* GamesPresenter.swift */; };
+		9AE8D19724C5FA4F001C7EBD /* GamesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8D19624C5FA4F001C7EBD /* GamesList.swift */; };
+		9AE8D19924C5FA63001C7EBD /* GamesDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8D19824C5FA63001C7EBD /* GamesDetail.swift */; };
+		9AE8D19C24C5FE3B001C7EBD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8D19B24C5FE3B001C7EBD /* BaseViewController.swift */; };
+		9AE8D19E24C60266001C7EBD /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8D19D24C60266001C7EBD /* Error.swift */; };
+		9AE8D1A124C7696B001C7EBD /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 9AE8D1A024C7696B001C7EBD /* Moya */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +65,19 @@
 		9A4CE22724C5E4490055EA45 /* GameBroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameBroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A4CE22B24C5E4490055EA45 /* GameBroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBroUITests.swift; sourceTree = "<group>"; };
 		9A4CE22D24C5E4490055EA45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A8B7B5524C8A37D005F3F21 /* RestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestClient.swift; sourceTree = "<group>"; };
+		9AB4076124C5EAF8009B93AF /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		9AB4076524C5EB7B009B93AF /* ParentPlatform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentPlatform.swift; sourceTree = "<group>"; };
+		9AB4076924C5EC98009B93AF /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		9AB4076B24C5ED71009B93AF /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		9AE8D18D24C5EEED001C7EBD /* GamesModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesModels.swift; sourceTree = "<group>"; };
+		9AE8D18F24C5F793001C7EBD /* GamesWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesWorker.swift; sourceTree = "<group>"; };
+		9AE8D19124C5F906001C7EBD /* GamesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesInteractor.swift; sourceTree = "<group>"; };
+		9AE8D19324C5F9D2001C7EBD /* GamesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesPresenter.swift; sourceTree = "<group>"; };
+		9AE8D19624C5FA4F001C7EBD /* GamesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesList.swift; sourceTree = "<group>"; };
+		9AE8D19824C5FA63001C7EBD /* GamesDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesDetail.swift; sourceTree = "<group>"; };
+		9AE8D19B24C5FE3B001C7EBD /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		9AE8D19D24C60266001C7EBD /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AE8D1A124C7696B001C7EBD /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +129,9 @@
 		9A4CE20624C5E4480055EA45 /* GameBro */ = {
 			isa = PBXGroup;
 			children = (
+				9AE8D19A24C5FE2A001C7EBD /* BaseModule */,
+				9AB4075E24C5E7DD009B93AF /* Model */,
+				9AB4075824C5E77B009B93AF /* Scene */,
 				9A4CE20724C5E4480055EA45 /* AppDelegate.swift */,
 				9A4CE20924C5E4480055EA45 /* SceneDelegate.swift */,
 				9A4CE20B24C5E4480055EA45 /* FirstViewController.swift */,
@@ -109,6 +140,7 @@
 				9A4CE21224C5E4490055EA45 /* Assets.xcassets */,
 				9A4CE21424C5E4490055EA45 /* LaunchScreen.storyboard */,
 				9A4CE21724C5E4490055EA45 /* Info.plist */,
+				9A8B7B5524C8A37D005F3F21 /* RestClient.swift */,
 			);
 			path = GameBro;
 			sourceTree = "<group>";
@@ -131,6 +163,55 @@
 			path = GameBroUITests;
 			sourceTree = "<group>";
 		};
+		9AB4075824C5E77B009B93AF /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				9AE8D18B24C5EEC5001C7EBD /* Games */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		9AB4075E24C5E7DD009B93AF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9AB4076124C5EAF8009B93AF /* Genre.swift */,
+				9AB4076524C5EB7B009B93AF /* ParentPlatform.swift */,
+				9AB4076924C5EC98009B93AF /* Game.swift */,
+				9AB4076B24C5ED71009B93AF /* Pagination.swift */,
+				9AE8D19D24C60266001C7EBD /* Error.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9AE8D18B24C5EEC5001C7EBD /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				9AE8D19524C5FA40001C7EBD /* View */,
+				9AE8D18D24C5EEED001C7EBD /* GamesModels.swift */,
+				9AE8D18F24C5F793001C7EBD /* GamesWorker.swift */,
+				9AE8D19124C5F906001C7EBD /* GamesInteractor.swift */,
+				9AE8D19324C5F9D2001C7EBD /* GamesPresenter.swift */,
+			);
+			path = Games;
+			sourceTree = "<group>";
+		};
+		9AE8D19524C5FA40001C7EBD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9AE8D19624C5FA4F001C7EBD /* GamesList.swift */,
+				9AE8D19824C5FA63001C7EBD /* GamesDetail.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9AE8D19A24C5FE2A001C7EBD /* BaseModule */ = {
+			isa = PBXGroup;
+			children = (
+				9AE8D19B24C5FE3B001C7EBD /* BaseViewController.swift */,
+			);
+			path = BaseModule;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,6 +228,9 @@
 			dependencies = (
 			);
 			name = GameBro;
+			packageProductDependencies = (
+				9AE8D1A024C7696B001C7EBD /* Moya */,
+			);
 			productName = GameBro;
 			productReference = 9A4CE20424C5E4480055EA45 /* GameBro.app */;
 			productType = "com.apple.product-type.application";
@@ -219,6 +303,9 @@
 				Base,
 			);
 			mainGroup = 9A4CE1FB24C5E4480055EA45;
+			packageReferences = (
+				9AE8D19F24C7696B001C7EBD /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = 9A4CE20524C5E4480055EA45 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -262,9 +349,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AE8D19E24C60266001C7EBD /* Error.swift in Sources */,
+				9AE8D19424C5F9D2001C7EBD /* GamesPresenter.swift in Sources */,
 				9A4CE20E24C5E4480055EA45 /* SecondViewController.swift in Sources */,
 				9A4CE20C24C5E4480055EA45 /* FirstViewController.swift in Sources */,
+				9AB4076224C5EAF8009B93AF /* Genre.swift in Sources */,
+				9AE8D19924C5FA63001C7EBD /* GamesDetail.swift in Sources */,
+				9AE8D19C24C5FE3B001C7EBD /* BaseViewController.swift in Sources */,
+				9AE8D19724C5FA4F001C7EBD /* GamesList.swift in Sources */,
+				9AE8D18E24C5EEED001C7EBD /* GamesModels.swift in Sources */,
+				9AB4076A24C5EC98009B93AF /* Game.swift in Sources */,
+				9AE8D19224C5F906001C7EBD /* GamesInteractor.swift in Sources */,
+				9A8B7B5624C8A37D005F3F21 /* RestClient.swift in Sources */,
 				9A4CE20824C5E4480055EA45 /* AppDelegate.swift in Sources */,
+				9AB4076C24C5ED71009B93AF /* Pagination.swift in Sources */,
+				9AE8D19024C5F793001C7EBD /* GamesWorker.swift in Sources */,
+				9AB4076624C5EB7B009B93AF /* ParentPlatform.swift in Sources */,
 				9A4CE20A24C5E4480055EA45 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,6 +688,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9AE8D19F24C7696B001C7EBD /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9AE8D1A024C7696B001C7EBD /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AE8D19F24C7696B001C7EBD /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9A4CE1FC24C5E4480055EA45 /* Project object */;
 }
