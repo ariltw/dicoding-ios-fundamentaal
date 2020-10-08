@@ -12,10 +12,10 @@ protocol GamesDetailDisplayLogic: class {
     func fetchDetailResult(viewModel: Games.Detail.ViewModel)
 }
 
-class GamesDetail: BaseViewController, GamesDetailDisplayLogic {
+class GamesDetailVC: BaseViewController, GamesDetailDisplayLogic {
     
     
     func fetchDetailResult(viewModel: Games.Detail.ViewModel) {
-        <#code#>
+//        <#code#>
     }
 }

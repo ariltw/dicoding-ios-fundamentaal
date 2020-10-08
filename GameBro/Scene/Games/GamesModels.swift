@@ -12,7 +12,7 @@ enum Games {
         
         static let API = "/api/games?page="
         
-        struct Request {
+        struct Request: Encodable {
             
         }
         
@@ -41,7 +41,7 @@ enum Games {
         
         static let API = "/api/games/"
         
-        struct Request {
+        struct Request: Encodable {
             
         }
         

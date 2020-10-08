@@ -23,19 +23,19 @@ class GamesInteractor: GamesBusinessLogic, GamesDataStore {
     var id: String?
     
     func requestList(page: String) {
-        worker.fetchList(by: page) { (response) in
-            <#code#>
-        } failed: { (error) in
-            <#code#>
-        }
+//        worker.fetchList(by: page) { (response) in
+//            <#code#>
+//        } failed: { (error) in
+//            <#code#>
+//        }
     }
     
     func requestDetail(id: String) {
-        worker.fetchDetail(by: id) { (response) in
-            <#code#>
-        } failed: { (error) in
-            <#code#>
-        }
+//        worker.fetchDetail(by: id) { (response) in
+//            <#code#>
+//        } failed: { (error) in
+//            <#code#>
+//        }
 
     }
 }

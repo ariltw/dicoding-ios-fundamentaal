@@ -6,7 +6,7 @@
 //  Copyright © 2020 ariltw. All rights reserved.
 //
 
-class Pagination {
+class Pagination: Decodable {
     var count: Int?
     var next: String?
     var previous: String?

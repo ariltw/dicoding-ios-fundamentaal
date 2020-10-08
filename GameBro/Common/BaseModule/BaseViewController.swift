@@ -8,8 +8,6 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
-    static func showAlert(title: String, message: String) {
-        
-    }
+open class BaseViewController: UIViewController {
+    
 }

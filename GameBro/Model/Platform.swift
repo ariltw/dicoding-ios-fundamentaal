@@ -6,7 +6,7 @@
 //  Copyright © 2020 ariltw. All rights reserved.
 //
 
-class ParentPlatform: Decodable {
+class Platform: Decodable {
     var id: Int?
     var name: String?
     
