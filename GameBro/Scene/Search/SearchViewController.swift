@@ -40,7 +40,6 @@ class SearchViewController: UIViewController, SearchDisplayLogic
   
   private func setup()
   {
-    print("test")
     let viewController = self
     let interactor = SearchInteractor()
     let presenter = SearchPresenter()

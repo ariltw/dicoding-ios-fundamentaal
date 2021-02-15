@@ -18,16 +18,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ow-yU-ZTS">
-                                <rect key="frame" x="186" y="438" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="J7m-Xn-hpK">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7VJ-ME-OXR">
+                                <rect key="frame" x="0.0" y="100" width="414" height="713"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eit-Zn-cXB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7VJ-ME-OXR" firstAttribute="top" secondItem="J7m-Xn-hpK" secondAttribute="bottom" id="4rA-dd-qs9"/>
+                            <constraint firstItem="J7m-Xn-hpK" firstAttribute="trailing" secondItem="eit-Zn-cXB" secondAttribute="trailing" id="AzD-zz-tOx"/>
+                            <constraint firstItem="7VJ-ME-OXR" firstAttribute="leading" secondItem="eit-Zn-cXB" secondAttribute="leading" id="BL4-S7-tHl"/>
+                            <constraint firstItem="J7m-Xn-hpK" firstAttribute="leading" secondItem="eit-Zn-cXB" secondAttribute="leading" id="Jp6-iV-axM"/>
+                            <constraint firstItem="eit-Zn-cXB" firstAttribute="bottom" secondItem="7VJ-ME-OXR" secondAttribute="bottom" id="Rq6-Dt-QL6"/>
+                            <constraint firstItem="J7m-Xn-hpK" firstAttribute="top" secondItem="eit-Zn-cXB" secondAttribute="top" id="iyF-Ec-4Ip"/>
+                            <constraint firstItem="eit-Zn-cXB" firstAttribute="trailing" secondItem="7VJ-ME-OXR" secondAttribute="trailing" id="tg6-qc-yob"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" id="a1k-6b-3bS">
                         <imageReference key="image" image="magnifyingglass" catalog="system" symbolScale="large"/>
