@@ -12,7 +12,7 @@ protocol GamesBusinessLogic {
 }
 
 protocol GamesDataStore {
-    var id: String? { get set }
+    
 }
 
 class GamesInteractor: GamesBusinessLogic, GamesDataStore {
@@ -20,22 +20,25 @@ class GamesInteractor: GamesBusinessLogic, GamesDataStore {
     var presenter: GamesPresentationLogic?
     var worker = GamesWorker()
     
-    var id: String?
-    
     func requestList(page: String) {
-//        worker.fetchList(by: page) { (response) in
-//            <#code#>
-//        } failed: { (error) in
-//            <#code#>
-//        }
+        worker.fetchList(from: page) { (result) in
+            switch result {
+            case .success(let response):
+                self.presenter?.presentList(result: .success(response))
+            case .failure(let error):
+                self.presenter?.presentList(result: .failure(error))
+            }
+        }
     }
     
     func requestDetail(id: String) {
-//        worker.fetchDetail(by: id) { (response) in
-//            <#code#>
-//        } failed: { (error) in
-//            <#code#>
-//        }
-
+        worker.fetchDetail(with: id) { (result) in
+            switch result {
+            case .success(let response):
+                self.presenter?.presentDetail(result: .success(response))
+            case .failure(let error):
+                self.presenter?.presentDetail(result: .failure(error))
+            }
+        }
     }
 }

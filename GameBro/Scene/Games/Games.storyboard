@@ -6,10 +6,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Games-->
+        <!--GameBro-->
         <scene sceneID="kly-c9-veb">
             <objects>
                 <viewController storyboardIdentifier="GamesListVC" id="mX8-Vo-TXK" customClass="GamesListVC" customModule="GameBro" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,31 +18,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIJ-2s-8Wt">
-                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zdb-Nt-Co1">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CYn-uw-aBj"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="lIJ-2s-8Wt" firstAttribute="centerY" secondItem="ZWt-BO-so1" secondAttribute="centerY" id="jtv-dC-cTr"/>
-                            <constraint firstItem="lIJ-2s-8Wt" firstAttribute="centerX" secondItem="ZWt-BO-so1" secondAttribute="centerX" id="ljL-eb-uP0"/>
+                            <constraint firstItem="zdb-Nt-Co1" firstAttribute="top" secondItem="CYn-uw-aBj" secondAttribute="top" id="DWU-yS-lhM"/>
+                            <constraint firstItem="CYn-uw-aBj" firstAttribute="bottom" secondItem="zdb-Nt-Co1" secondAttribute="bottom" id="GOX-Sa-gXY"/>
+                            <constraint firstItem="zdb-Nt-Co1" firstAttribute="leading" secondItem="CYn-uw-aBj" secondAttribute="leading" id="SpQ-Uv-71K"/>
+                            <constraint firstItem="CYn-uw-aBj" firstAttribute="trailing" secondItem="zdb-Nt-Co1" secondAttribute="trailing" id="dec-5z-leF"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Games" id="sHG-NS-Zxr">
-                        <imageReference key="image" image="gamecontroller" catalog="system" symbolScale="large"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="GameBro" id="xnM-L3-XBI"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2wh-ub-8VK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="146" y="-74"/>
+            <point key="canvasLocation" x="1055.072463768116" y="-74.330357142857139"/>
+        </scene>
+        <!--Games-->
+        <scene sceneID="b5P-1Z-vOd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e7f-Fr-5ch" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Games" id="sHG-NS-Zxr">
+                        <imageReference key="image" image="gamecontroller" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="GWy-Vg-0B0">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mX8-Vo-TXK" kind="relationship" relationship="rootViewController" id="04P-Kl-Wgq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="51x-Lg-y2F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="144.92753623188406" y="-74.330357142857139"/>
         </scene>
     </scenes>
     <resources>
         <image name="gamecontroller" catalog="system" width="128" height="80"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

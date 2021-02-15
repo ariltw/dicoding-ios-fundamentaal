@@ -9,41 +9,46 @@
 import Foundation
 
 protocol GamesType {
-    func fetchList(from nextPage: String, success: @escaping (Games.List.Response) -> Void, failed: @escaping (Error) -> Void)
-    func fetchDetail(with id: String, success: @escaping (Games.Detail.Response) -> Void, failed: @escaping (Error) -> Void)
+    func fetchList(from nextPage: String, completion: @escaping (Result<Games.List.Response, Error>) -> Void)
+    func fetchDetail(with id: String, completion: @escaping (Result<Games.Detail.Response, Error>) -> Void)
 }
 
 class GamesWorker: GamesType {
     
-    let restClient = RestClient()
+    private let restClient = RestClient()
     
-    func fetchList(from nextPage: String, success: @escaping (Games.List.Response) -> Void, failed: @escaping (Error) -> Void) {
-//        self.restClient.GET(from: nextPage, with: nil) { (data) in
-//            do {
-//                let response = try JSONDecoder().decode(Games.List.Response.self, from: data)
-//                success(response)
-//            } catch {
-//                print("Parsing Data Error: \(error)")
-//                failed(Error().JSONParsingFailed())
-//            }
-//        } errorHandler: { (error) in
-//            print("Retrive Data Error: \(error)")
-//            failed(error)
-//        }
+    func fetchList(from nextPage: String, completion: @escaping (Result<Games.List.Response, Error>) -> Void) {
+        restClient.GET(from: Games.List.API + nextPage, with: nil) { (result) in
+            switch result {
+            case .success(let data):
+                do {
+                    let response = try JSONDecoder().decode(Games.List.Response.self, from: data)
+                    completion(.success(response))
+                } catch {
+                    print("Parsing data error: \(error)")
+                    completion(.failure(BaseError.internalError))
+                }
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
     }
     
-    func fetchDetail(with id: String, success: @escaping (Games.Detail.Response) -> Void, failed: @escaping (Error) -> Void) {
-//        self.restClient.GET(from: id, with: nil) { (data) in
-//            do {
-//                let response = try JSONDecoder().decode(Games.Detail.Response, from: data)
-//                success(response)
-//            } catch {
-//                print("Parsing Data Error: \(error)")
-//                failed(Error().JSONParsingFailed())
-//            }
-//        } errorHandler: { (error) in
-//            print("Retrive Data Error: \(error)")
-//            failed(error)
-//        }
+    func fetchDetail(with id: String, completion: @escaping (Result<Games.Detail.Response, Error>) -> Void) {
+        restClient.GET(from: Games.Detail.API + id, with: nil) { (result) in
+            switch result {
+            case .success(let data):
+                do {
+                    let response = try JSONDecoder().decode(Games.Detail.Response.self, from: data)
+                    completion(.success(response))
+                } catch {
+                    print("Parsing data error: \(error)")
+                    completion(.failure(BaseError.internalError))
+                }
+                
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
     }
 }
