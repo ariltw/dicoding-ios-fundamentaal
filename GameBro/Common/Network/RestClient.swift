@@ -11,9 +11,9 @@ import SystemConfiguration
 
 class RestClient {
     
-    fileprivate var BASE_URL = Bundle.main.object(forInfoDictionaryKey: "Base URL") as! String
+    fileprivate var BASE_URL = "https://api.rawg.io"
     
-    func GET(from url: String, with params: [URLQueryItem]?, completionHandler: @escaping (Result<Decodable, BaseError>) -> Void) {
+    func GET(from url: String, with params: [URLQueryItem]?, completionHandler: @escaping (Result<Data, BaseError>) -> Void) {
         let request = composeRequest(from: url, with: params, with: nil, method: "GET")
         
         run(using: request) { (result) in
@@ -28,7 +28,7 @@ class RestClient {
         }
     }
     
-    func POST(from url: String, with params: [URLQueryItem]?, body: Data, completionHandler: @escaping (Result<Decodable, BaseError>) -> Void) {
+    func POST(from url: String, with params: [URLQueryItem]?, body: Data, completionHandler: @escaping (Result<Data, BaseError>) -> Void) {
         let request = composeRequest(from: url, with: params, with: body, method: "POST")
         
         run(using: request) { (result) in
@@ -51,18 +51,23 @@ extension RestClient {
     
     private func composeRequest(from URL: String!, with params: [URLQueryItem]?, with body: Data?, method: String!) -> URLRequest {
         var components = URLComponents(string: BASE_URL + URL)!
-        let bodyEncoded = try! JSONEncoder().encode(body)
         
         // compose params
-        for param in params! {
-            components.queryItems?.append(param)
-        }
+        params?.forEach({ (item) in
+            components.queryItems?.append(item)
+        })
         
         // compose request
         var request = URLRequest(url: components.url!)
         request.httpMethod = method
-        request.httpBody = bodyEncoded
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        // compose body
+        if let body = body {
+            let bodyEncoded = try! JSONEncoder().encode(body)
+            request.httpBody = bodyEncoded
+        }
+        
         return request
     }
     
@@ -75,17 +80,18 @@ extension RestClient {
         
         // run http request
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            let responses = response as! HTTPURLResponse
-            let status = responses.statusCode
+            let responses = response as? HTTPURLResponse
+            let status = responses?.statusCode
             
             // transport error
             if error != nil {
+                print(error!)
                 completionHandler(Result.failure(BaseError.networkFailed))
                 return
             }
             
             // server side error
-            guard (200...299).contains(status) else {
+            guard (200...299).contains(status ?? 501) else {
                 completionHandler(Result.failure(BaseError.serverSideError))
                 return
             }

@@ -19,4 +19,6 @@ enum BaseError: String, Error {
     case serverSideError = "Server Error! Please check network request"
     
     case networkError = "Network error! Please check your connection"
+    
+    case internalError = "Sorry, we having some internal trouble!"
 }

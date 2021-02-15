@@ -9,7 +9,10 @@
 /* Begin PBXBuildFile section */
 		9A021718252F7E5600DAA27D /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A021717252F7E5500DAA27D /* About.storyboard */; };
 		9A02171D252F7F0B00DAA27D /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A02171C252F7F0B00DAA27D /* AboutVC.swift */; };
+		9A2AC600252FA25C00364548 /* GamesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2AC5FF252FA25C00364548 /* GamesRouter.swift */; };
+		9A34B9B425377B670097E943 /* GameItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A34B9B325377B670097E943 /* GameItemCell.xib */; };
 		9A36FA3024DB170700A1D4F7 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A36FA2F24DB170700A1D4F7 /* UIViewControllerExtension.swift */; };
+		9A385F062538CAE9006A6814 /* UICardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A385F052538CAE9006A6814 /* UICardView.swift */; };
 		9A4CE20824C5E4480055EA45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4CE20724C5E4480055EA45 /* AppDelegate.swift */; };
 		9A4CE20A24C5E4480055EA45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4CE20924C5E4480055EA45 /* SceneDelegate.swift */; };
 		9A4CE21124C5E4480055EA45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A4CE20F24C5E4480055EA45 /* Main.storyboard */; };
@@ -60,7 +63,10 @@
 /* Begin PBXFileReference section */
 		9A021717252F7E5500DAA27D /* About.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
 		9A02171C252F7F0B00DAA27D /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
+		9A2AC5FF252FA25C00364548 /* GamesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesRouter.swift; sourceTree = "<group>"; };
+		9A34B9B325377B670097E943 /* GameItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameItemCell.xib; sourceTree = "<group>"; };
 		9A36FA2F24DB170700A1D4F7 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		9A385F052538CAE9006A6814 /* UICardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICardView.swift; sourceTree = "<group>"; };
 		9A4CE20424C5E4480055EA45 /* GameBro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameBro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A4CE20724C5E4480055EA45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A4CE20924C5E4480055EA45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +171,30 @@
 			path = UIElement;
 			sourceTree = "<group>";
 		};
+		9A34B9B025377B430097E943 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				9A34B9B125377B4B0097E943 /* Cell */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		9A34B9B125377B4B0097E943 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9A34B9B225377B520097E943 /* GameItemCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		9A34B9B225377B520097E943 /* GameItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				9A34B9B325377B670097E943 /* GameItemCell.xib */,
+			);
+			path = GameItemCell;
+			sourceTree = "<group>";
+		};
 		9A4CE1FB24C5E4480055EA45 = {
 			isa = PBXGroup;
 			children = (
@@ -188,15 +218,17 @@
 		9A4CE20624C5E4480055EA45 /* GameBro */ = {
 			isa = PBXGroup;
 			children = (
-				9A02170D252F7D7100DAA27D /* Common */,
+				9A34B9B025377B430097E943 /* Shared */,
 				9AB4075E24C5E7DD009B93AF /* Model */,
+				9A02170D252F7D7100DAA27D /* Common */,
 				9AB4075824C5E77B009B93AF /* Scene */,
+				9A4CE21724C5E4490055EA45 /* Info.plist */,
 				9A4CE20724C5E4480055EA45 /* AppDelegate.swift */,
 				9A4CE20924C5E4480055EA45 /* SceneDelegate.swift */,
-				9A4CE20F24C5E4480055EA45 /* Main.storyboard */,
 				9A4CE21224C5E4490055EA45 /* Assets.xcassets */,
 				9A4CE21424C5E4490055EA45 /* LaunchScreen.storyboard */,
-				9A4CE21724C5E4490055EA45 /* Info.plist */,
+				9A4CE20F24C5E4480055EA45 /* Main.storyboard */,
+				9A385F052538CAE9006A6814 /* UICardView.swift */,
 			);
 			path = GameBro;
 			sourceTree = "<group>";
@@ -263,6 +295,7 @@
 				9AE8D19124C5F906001C7EBD /* GamesInteractor.swift */,
 				9AE8D19324C5F9D2001C7EBD /* GamesPresenter.swift */,
 				9A69F16524E2F8E700E39D8A /* Games.storyboard */,
+				9A2AC5FF252FA25C00364548 /* GamesRouter.swift */,
 			);
 			path = Games;
 			sourceTree = "<group>";
@@ -397,6 +430,7 @@
 				9A4CE21624C5E4490055EA45 /* LaunchScreen.storyboard in Resources */,
 				9A021718252F7E5600DAA27D /* About.storyboard in Resources */,
 				9A4CE21324C5E4490055EA45 /* Assets.xcassets in Resources */,
+				9A34B9B425377B670097E943 /* GameItemCell.xib in Resources */,
 				9A4CE21124C5E4480055EA45 /* Main.storyboard in Resources */,
 				9A69F16924E2FBCC00E39D8A /* Search.storyboard in Resources */,
 			);
@@ -437,10 +471,12 @@
 				9A36FA3024DB170700A1D4F7 /* UIViewControllerExtension.swift in Sources */,
 				9A02171D252F7F0B00DAA27D /* AboutVC.swift in Sources */,
 				9AB4076A24C5EC98009B93AF /* Game.swift in Sources */,
+				9A385F062538CAE9006A6814 /* UICardView.swift in Sources */,
 				9AE8D19224C5F906001C7EBD /* GamesInteractor.swift in Sources */,
 				9A8B7B5624C8A37D005F3F21 /* RestClient.swift in Sources */,
 				9A69F17524E2FC2F00E39D8A /* SearchInteractor.swift in Sources */,
 				9A69F17724E2FC5900E39D8A /* SearchViewController.swift in Sources */,
+				9A2AC600252FA25C00364548 /* GamesRouter.swift in Sources */,
 				9A4CE20824C5E4480055EA45 /* AppDelegate.swift in Sources */,
 				9AB4076C24C5ED71009B93AF /* Pagination.swift in Sources */,
 				9AE8D19024C5F793001C7EBD /* GamesWorker.swift in Sources */,
